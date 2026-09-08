@@ -18,5 +18,21 @@ class StringMethods {
         System.out.println(s.substring(5));
         System.out.println(s.substring(5, 14));
 
+        String s1 = " Java  ";
+        System.out.println(s1.trim());
+        System.out.println(s1.stripLeading());//trim begining spaces
+        System.out.println(s1.stripTrailing());//trim last spaces
+
+        String s2 = "Raja";
+        System.out.println(s2.isEmpty());//false
+        System.out.println(s2.isBlank());//false
+
+        String s3 = "";
+        System.out.println(s3.isEmpty());//true
+        System.out.println(s3.isBlank());//true
+
+        String s4 = " ";
+        System.out.println(s4.isEmpty());//false
+        System.out.println(s4.isBlank());//true
     }
 }
