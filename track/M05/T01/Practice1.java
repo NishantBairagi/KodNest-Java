@@ -10,7 +10,9 @@ class Book {
     }
 
     public void setPageNum(int pageNum) {
-        this.pageNum = pageNum;
+        if (pageNum > 0) {
+            this.pageNum = pageNum;
+        }
     }
 
 }
