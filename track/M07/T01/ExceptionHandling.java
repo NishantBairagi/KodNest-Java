@@ -13,7 +13,7 @@ class ExceptionHandling {
             System.out.println("Enter b");
             int b = sc.nextInt();
 
-            int res = a / b;
+            int res = a / b;//compiler will not find the exception occure than it is called unchecked it will checked by compiler at runntime and dont force us to handle this at compile time
 
             System.out.println("Result: " + res);
 
