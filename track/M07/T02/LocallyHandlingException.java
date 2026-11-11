@@ -5,7 +5,11 @@ public class LocallyHandlingException {
 
     public static void main(String[] args) {
         System.out.println("Main method started");
-        divide();
+        try {
+            divide();
+        } catch (Exception e) {
+            System.out.println("Exception handled in main method");
+        }
         System.out.println("Main method completed");
     }
 
@@ -22,6 +26,7 @@ public class LocallyHandlingException {
             System.out.println("Result: " + res);
         } catch (Exception e) {
             System.out.println("Exception handled in dividion method");
+            throw e;
         }
         System.out.println("Division completed");
     }
