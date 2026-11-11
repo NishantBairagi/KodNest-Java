@@ -35,8 +35,9 @@ public class MultipleCatch {
             e3.printStackTrace();
         } catch (Exception e4) {
             e4.printStackTrace();
+        } finally {
+            System.out.println("Connection terminated");
         }
-        System.out.println("Connection terminated");
 
     }
 }
