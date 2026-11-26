@@ -1,0 +1,61 @@
+
+import java.util.HashSet;
+import java.util.Objects;
+
+class Student {
+
+    int roll;
+    String name;
+
+    public Student(int roll, String name) {
+        this.roll = roll;
+        this.name = name;
+    }
+
+    public void display() {
+        System.out.println(roll + " " + name);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+
+        Student s = (Student) obj;
+        return s.roll == this.roll && this.name.equals(s.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(roll, name);
+    }
+
+    @Override
+    public String toString() {
+        return roll + " " + name;
+    }
+}
+
+public class StudentApp {
+
+    public static void main(String[] args) {
+
+        Student s1 = new Student(11, "Arjun");
+        Student s2 = new Student(12, "Rahul");
+        Student s3 = new Student(11, "Arjun");
+
+        HashSet<Student> hs = new HashSet<>();
+
+        hs.add(s1);
+        hs.add(s2);
+        hs.add(s3);
+
+        System.out.println(hs);
+
+    }
+}
